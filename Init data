@@ -1,0 +1,5 @@
+donnees = read.table("C:/Users/gmonceau/Documents/Tests/Données/fichier global palourde 2003 a maintenant.txt", header=TRUE, sep="\t")  
+donnees_sp =  readOGR(dsn = "C:/Users/gmonceau/Documents/Tests/Données/shp bassin entier/bassin entier.shp")
+bassin = spTransform(donnees_sp, CRS("+init=epsg:2154")) 
+projec.toggle(0)
+
